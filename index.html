@@ -30,9 +30,14 @@
     <p>Estoy aprendiendo desarrollo web.</p>
     <button>Haz click aqui</button>
     <script>
-      document.querySelector('button').addEventListener('click', function() {
-        document.querySelector('h1').textContent = 'Bienvenido a ZIYU';
-      });
+function cambiarTitulo(texto) {
+  document.querySelector('h1').textContent = texto;
+}
+
+document.querySelector('button').addEventListener('click', function() {
+  const nombre = 'David';
+  cambiarTitulo('Bienvenido, ' + nombre);
+});
     </script>
   </body>
 </html>
