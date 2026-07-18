@@ -30,14 +30,27 @@
     <p>Estoy aprendiendo desarrollo web.</p>
     <button>Haz click aqui</button>
     <script>
-function cambiarTitulo(texto) {
-  document.querySelector('h1').textContent = texto;
+// 1 - SECUENCIA
+const nombre = 'David';
+const puerto = 'San Antonio';
+console.log('Usuario: ' + nombre);
+console.log('Puerto asignado: ' + puerto);
+
+// 2 - CONDICION
+const acceso = true;
+
+if (acceso === true) {
+  console.log('Acceso permitido al sistema ZIYU');
+} else {
+  console.log('Acceso denegado');
 }
 
-document.querySelector('button').addEventListener('click', function() {
-  const nombre = 'David';
-  cambiarTitulo('Bienvenido, ' + nombre);
-});
+// 3 - REPETICION
+const puertos = ['San Antonio', 'Lirquén', 'Columbo'];
+
+for (let i = 0; i < puertos.length; i++) {
+  console.log('Puerto ' + (i + 1) + ': ' + puertos[i]);
+}
     </script>
   </body>
 </html>
