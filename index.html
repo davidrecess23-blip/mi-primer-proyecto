@@ -31,11 +31,17 @@
     <button>Haz click aqui</button>
     <script>
 const envios = [
-    { cliente: 'ZIYU',     peso: 50,  destino: 'San Antonio', entregado: true  },
-    { cliente: 'RamcoLog', peso: 120, destino: 'Lirquén',     entregado: false },
-    { cliente: 'PortCo',   peso: 30,  destino: 'Columbo',     entregado: true  },
-      
+  { cliente: 'ZIYU',     peso: 50,  destino: 'San Antonio', entregado: true  },
+  { cliente: 'RamcoLog', peso: 120, destino: 'Lirquen',     entregado: false },
+  { cliente: 'PortCo',   peso: 30,  destino: 'Columbo',     entregado: true  }
 ];
+
+function obtenerPendientes(lista) {
+  return lista.filter(envio => envio.entregado === false);
+  
+}
+const resultado = obtenerPendientes(envios);
+console.log('Envios pendientes:', resultado);
     </script>
   </body>
 </html>
