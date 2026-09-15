@@ -30,18 +30,28 @@
     <p>Estoy aprendiendo desarrollo web.</p>
     <button>Haz click aqui</button>
     <script>
-const obtenerDatos = async () => {
-    try {
-        const respuesta = await fetch('https://jsonplaceholder.typicode.com/users');
-        const datos = await respuesta.json();
-        console.log('Usuarios recibidos:', datos.length);
-        console.log('Primer usuario:', datos[0].name);
-    } catch (error) {
-        console.log('Algo salio mal:', error);
+class Envio {
+    constructor(cliente, peso, destino) {
+        this.cliente = cliente;
+        this.peso = peso;
+        this.destino = destino;
+        this.entregado = false;
     }
-};
 
-obtenerDatos();
+    marcarEntregado() {
+        this.entregado = true;
+        console.log('Envio de ' + this.cliente + ' marcado como entregado');
+    }
+}
+
+const envio1 = new Envio('ZIYU', 50, 'San Antonio');
+const envio2 = new Envio('RamcoLog', 120, 'Lirquen');
+
+console.log(envio1);
+console.log(envio2);
+
+envio1.marcarEntregado();
+console.log('Estado envio1:', envio1.entregado);
     </script>
   </body>
 </html>
