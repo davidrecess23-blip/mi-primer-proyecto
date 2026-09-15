@@ -30,6 +30,7 @@
     <p>Estoy aprendiendo desarrollo web.</p>
     <button>Haz click aqui</button>
     <script>
+<<<<<<< HEAD
 class Envio {
     constructor(cliente, peso, destino) {
         this.cliente = cliente;
@@ -52,6 +53,20 @@ console.log(envio2);
 
 envio1.marcarEntregado();
 console.log('Estado envio1:', envio1.entregado);
+=======
+const envios = [
+  { cliente: 'ZIYU',     peso: 50,  destino: 'San Antonio', entregado: true  },
+  { cliente: 'RamcoLog', peso: 120, destino: 'Lirquen',     entregado: false },
+  { cliente: 'PortCo',   peso: 30,  destino: 'Columbo',     entregado: true  }
+];
+
+function obtenerPendientes(lista) {
+  return lista.filter(envio => envio.entregado === false);
+  
+}
+const resultado = obtenerPendientes(envios);
+console.log('Envios pendientes:', resultado);
+>>>>>>> parent of 7f06258 (Agrego fetch y promesas)
     </script>
   </body>
 </html>
